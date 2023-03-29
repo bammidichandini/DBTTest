@@ -1,0 +1,13 @@
+data_warehouse:
+  target: dev
+  outputs:
+    dev:
+      dataset: dbt_commandline_central_dataset
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /home/ib-developer/Downloads/access.json
+      method: service-account
+      priority: interactive
+      project: testing-drive-in-python
+      threads: 4
+      type: bigquery
