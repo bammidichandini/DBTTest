@@ -19,3 +19,5 @@ WITH customer_orders as (
         customer_orders.lifetime_value
     from {{ ref('stg_customers') }}
     left join customer_orders using (customer_id)
+
+-- test
