@@ -4,7 +4,9 @@ WITH customer_orders as (
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders,
-        sum(amount) as lifetime_value
+        sum(amount) as lifetime_value,
+        sum(amount) as testing_value
+        
     from {{ ref('fct_orders') }}
     group by 1
 )
